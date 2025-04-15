@@ -37,8 +37,16 @@ export default function Footer() {
         </div>
         
         <div className="mt-8 pt-8 border-t border-blue-800 text-center">
+          <div className="flex justify-center mb-4">
+            <img 
+              src="/images/realmbyRook_logo.svg" 
+              alt="Powered by RealmByRook" 
+              className="h-12 hover:opacity-90 transition-opacity"
+            />
+          </div>
           <p>&copy; {new Date().getFullYear()} Nambi Narayanan Tribute. All rights reserved.</p>
           <p className="mt-2 text-sm">This website is not affiliated with ISRO or any government agency.</p>
+          <p className="mt-2 text-sm">Powered by RealmByRook</p>
         </div>
       </div>
     </footer>

@@ -40,14 +40,13 @@ export default function Header() {
           </div>
           
           <div className="hidden md:block">
-            <ul className="flex space-x-6 text-white">
-              <li><a href="#home" className="hover:text-[#FF9933] transition-colors">Home</a></li>
-              <li><a href="#biography" className="hover:text-[#FF9933] transition-colors">Biography</a></li>
-              <li><a href="#career" className="hover:text-[#FF9933] transition-colors">Career</a></li>
-              <li><a href="#case" className="hover:text-[#FF9933] transition-colors">Espionage Case</a></li>
-              <li><a href="#gallery" className="hover:text-[#FF9933] transition-colors">Gallery</a></li>
-              <li><a href="#resources" className="hover:text-[#FF9933] transition-colors">Resources</a></li>
-            </ul>
+            <div className="flex items-center">
+              <img 
+                src="/images/realmbyRook_logo.svg" 
+                alt="Powered by RealmByRook" 
+                className="h-10 hover:opacity-90 transition-opacity"
+              />
+            </div>
           </div>
           
           <div className="md:hidden">
@@ -65,6 +64,13 @@ export default function Header() {
       <div 
         className={`bg-[#072a66] md:hidden ${mobileMenuOpen ? 'block' : 'hidden'}`}
       >
+        <div className="py-4 px-4 text-white flex justify-center">
+          <img 
+            src="/images/realmbyRook_logo.svg" 
+            alt="Powered by RealmByRook" 
+            className="h-10 hover:opacity-90 transition-opacity"
+          />
+        </div>
         <ul className="py-2 px-4 space-y-2 text-white">
           <li><a href="#home" className="block py-2 hover:text-[#FF9933] transition-colors" onClick={handleNavLinkClick}>Home</a></li>
           <li><a href="#biography" className="block py-2 hover:text-[#FF9933] transition-colors" onClick={handleNavLinkClick}>Biography</a></li>
