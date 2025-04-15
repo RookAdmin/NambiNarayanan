@@ -31,20 +31,23 @@ export default function GallerySection() {
           {galleryData.map((item, index) => (
             <div 
               key={index} 
-              className="gallery-item cursor-pointer overflow-hidden rounded-lg shadow-md transition-transform hover:scale-105"
+              className="gallery-item cursor-pointer overflow-hidden rounded-lg shadow-md card-hover-scale animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
               onClick={() => openModal({
                 src: item.imageUrl,
                 alt: item.alt,
                 caption: item.caption
               })}
             >
-              <img 
-                src={item.imageUrl} 
-                alt={item.alt} 
-                className="w-full h-64 object-cover" 
-              />
+              <div className="overflow-hidden">
+                <img 
+                  src={item.imageUrl} 
+                  alt={item.alt} 
+                  className="w-full h-64 object-cover transition-transform duration-700 hover:scale-110" 
+                />
+              </div>
               <div className="p-4 bg-white">
-                <p className="font-semibold">{item.caption}</p>
+                <p className="font-semibold transition-colors duration-300 hover:text-[#FF9933]">{item.caption}</p>
               </div>
             </div>
           ))}

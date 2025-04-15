@@ -13,14 +13,18 @@ export default function CareerSection() {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {careerData.map((item, index) => (
-            <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden">
+            <div 
+              key={index} 
+              className="bg-white rounded-lg shadow-md overflow-hidden card-hover animate-fade-in"
+              style={{ animationDelay: `${index * 0.1}s` }}
+            >
               <div 
-                className="h-48 bg-cover bg-center" 
+                className="h-48 bg-cover bg-center transition-transform duration-700 hover:scale-110" 
                 style={{ backgroundImage: `url('${item.imageUrl}')` }}
                 aria-label={item.title}
               ></div>
               <div className="p-6">
-                <h3 className="text-xl font-bold text-[#0B3D91] mb-2">{item.title}</h3>
+                <h3 className="text-xl font-bold text-[#0B3D91] mb-2 transition-colors duration-300 group-hover:text-[#FF9933]">{item.title}</h3>
                 <p className="mb-4">{item.description}</p>
                 <p className="text-sm text-gray-600 italic">{item.note}</p>
               </div>
@@ -28,7 +32,7 @@ export default function CareerSection() {
           ))}
         </div>
         
-        <div className="mt-12 p-6 bg-white rounded-lg shadow-md border-l-4 border-[#138808]">
+        <div className="mt-12 p-6 bg-white rounded-lg shadow-md border-l-4 border-[#138808] animate-slide-up">
           <h3 className="text-xl font-bold text-[#0B3D91] mb-4">The Impact of Nambi Narayanan's Work</h3>
           <p className="mb-4">
             Nambi Narayanan's contributions to India's space program went far beyond individual technological 

@@ -12,18 +12,22 @@ export default function ResourcesSection() {
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <div className="bg-white rounded-lg shadow-md p-8 card-hover animate-fade-in">
             <h3 className="text-2xl font-bold text-[#0B3D91] mb-6">Books & Publications</h3>
             <ul className="space-y-6">
               {bookData.map((item, index) => (
-                <li key={index} className="flex">
-                  <div className="mr-4 flex-shrink-0 text-[#FF9933]">
+                <li 
+                  key={index} 
+                  className="flex p-3 rounded-lg transition-all duration-300 hover:bg-gray-50"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="mr-4 flex-shrink-0 text-[#FF9933] transition-transform duration-300 hover:scale-110">
                     <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253" />
                     </svg>
                   </div>
                   <div>
-                    <h4 className="font-semibold">{item.title}</h4>
+                    <h4 className="font-semibold transition-colors duration-300 hover:text-[#FF9933]">{item.title}</h4>
                     <p className="text-sm mb-2">{item.author}</p>
                     <p className="text-gray-600">{item.description}</p>
                   </div>
@@ -32,12 +36,16 @@ export default function ResourcesSection() {
             </ul>
           </div>
           
-          <div className="bg-white rounded-lg shadow-md p-8">
+          <div className="bg-white rounded-lg shadow-md p-8 card-hover animate-fade-in" style={{ animationDelay: '0.2s' }}>
             <h3 className="text-2xl font-bold text-[#0B3D91] mb-6">Media & Documentaries</h3>
             <ul className="space-y-6">
               {mediaData.map((item, index) => (
-                <li key={index} className="flex">
-                  <div className="mr-4 flex-shrink-0 text-[#FF9933]">
+                <li 
+                  key={index} 
+                  className="flex p-3 rounded-lg transition-all duration-300 hover:bg-gray-50"
+                  style={{ animationDelay: `${index * 0.1 + 0.3}s` }}
+                >
+                  <div className="mr-4 flex-shrink-0 text-[#FF9933] transition-transform duration-300 hover:scale-110">
                     {item.type === 'film' ? (
                       <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M7 4v16M17 4v16M3 8h18M3 16h18" />
@@ -53,7 +61,7 @@ export default function ResourcesSection() {
                     )}
                   </div>
                   <div>
-                    <h4 className="font-semibold">{item.title}</h4>
+                    <h4 className="font-semibold transition-colors duration-300 hover:text-[#FF9933]">{item.title}</h4>
                     <p className="text-sm mb-2">{item.creator}</p>
                     <p className="text-gray-600">{item.description}</p>
                   </div>
