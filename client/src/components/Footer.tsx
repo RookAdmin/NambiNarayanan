@@ -40,7 +40,7 @@ export default function Footer() {
           <div className="flex justify-center items-center mb-4">
             <span className="text-white mr-2">Powered by</span>
             <img 
-              src="/images/realmbyRook_logo.svg" 
+              src="/images/realmbyRook_logo.webp" 
               alt="RealmByRook" 
               className="h-10 hover:opacity-90 transition-opacity"
             />

@@ -43,7 +43,7 @@ export default function Header() {
             <div className="flex items-center">
               <span className="text-white mr-2 text-sm">Powered by</span>
               <img 
-                src="/images/realmbyRook_logo.svg" 
+                src="/images/realmbyRook_logo.webp" 
                 alt="RealmByRook" 
                 className="h-8 hover:opacity-90 transition-opacity"
               />
@@ -68,7 +68,7 @@ export default function Header() {
         <div className="py-4 px-4 text-white flex justify-center items-center">
           <span className="text-white mr-2 text-sm">Powered by</span>
           <img 
-            src="/images/realmbyRook_logo.svg" 
+            src="/images/realmbyRook_logo.webp" 
             alt="RealmByRook" 
             className="h-8 hover:opacity-90 transition-opacity"
           />
