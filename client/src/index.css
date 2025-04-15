@@ -36,6 +36,30 @@
   .animate-pulse-slow {
     animation: pulseSlow 3s infinite;
   }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .photo-shine-effect::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -60%;
+    width: 20%;
+    height: 200%;
+    opacity: 0;
+    background: rgba(255, 255, 255, 0.13);
+    background: linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.13) 0%,
+      rgba(255, 255, 255, 0.13) 77%,
+      rgba(255, 255, 255, 0.5) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+    transform: rotate(30deg);
+    animation: photoShine 5s ease-in-out infinite;
+  }
 }
 
 @keyframes fadeIn {
@@ -64,5 +88,39 @@
   }
   50% {
     transform: scale(1.03);
+  }
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.1);
+  }
+  50% {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 15px 0px rgba(0,0,0,0.05);
+  }
+  100% {
+    transform: translateY(0px);
+    box-shadow: 0 5px 15px 0px rgba(0,0,0,0.1);
+  }
+}
+
+@keyframes photoShine {
+  0% {
+    opacity: 0;
+    left: -60%;
+  }
+  20% {
+    opacity: 0;
+    left: -60%;
+  }
+  40% {
+    opacity: 0.4;
+    left: 100%;
+  }
+  100% {
+    opacity: 0;
+    left: 100%;
   }
 }
