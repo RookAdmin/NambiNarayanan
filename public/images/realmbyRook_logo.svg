@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="160" height="40" viewBox="0 0 160 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- RealmByRook logo -->
+  <defs>
+    <linearGradient id="logoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#6A11CB" />
+      <stop offset="100%" stop-color="#2575FC" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Stylized "R" chess piece (Rook) -->
+  <path d="M10 8 L20 8 L20 12 L16 12 L16 16 L20 16 L20 20 L16 20 L16 28 L20 28 L20 32 L4 32 L4 28 L8 28 L8 20 L4 20 L4 16 L8 16 L8 12 L4 12 L4 8 Z" fill="url(#logoGradient)"/>
+  
+  <!-- Text -->
+  <text x="30" y="25" font-family="Arial" font-size="16" font-weight="bold" fill="#333">RealmByRook</text>
+</svg>
